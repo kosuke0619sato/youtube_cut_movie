@@ -12,7 +12,7 @@ transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
 transcript_text = ' '.join([x['text'] for x in transcript_list])
 
 # GPT-4で面白い部分を抽出
-openai.api_key = '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'
+openai.api_key = ''
 response = openai.Completion.create(
     engine="text-davinci-002",
     prompt=transcript_text,
